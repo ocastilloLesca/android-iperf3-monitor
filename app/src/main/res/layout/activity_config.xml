@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:text="🌐 COOPELESCA R.L.\nMonitor de Red v1.0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin"/>
+
+        <!-- Servidor iperf3 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Servidor iperf3" android:textColor="@color/text_dark"
+            android:textStyle="bold" android:textSize="@dimen/text_body"
+            android:layout_marginBottom="@dimen/margin_small"/>
+        <EditText android:id="@+id/etServer"
+            android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+            android:hint="192.168.x.x" android:inputType="textUri"
+            android:text="192.168.50.1" android:padding="@dimen/margin_small"
+            android:background="@color/white" android:layout_marginBottom="@dimen/margin"/>
+
+        <!-- Puerto -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Puerto" android:textColor="@color/text_dark"
+            android:textStyle="bold" android:textSize="@dimen/text_body"
+            android:layout_marginBottom="@dimen/margin_small"/>
+        <EditText android:id="@+id/etPort"
+            android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+            android:hint="5201" android:inputType="number"
+            android:text="5201" android:padding="@dimen/margin_small"
+            android:background="@color/white" android:layout_marginBottom="@dimen/margin"/>
+
+        <!-- IP Ping -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="IP para Ping" android:textColor="@color/text_dark"
+            android:textStyle="bold" android:textSize="@dimen/text_body"
+            android:layout_marginBottom="@dimen/margin_small"/>
+        <EditText android:id="@+id/etPing"
+            android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+            android:hint="8.8.8.8" android:inputType="textUri"
+            android:text="8.8.8.8" android:padding="@dimen/margin_small"
+            android:background="@color/white" android:layout_marginBottom="@dimen/margin"/>
+
+        <!-- Protocolo -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Protocolo" android:textColor="@color/text_dark"
+            android:textStyle="bold" android:textSize="@dimen/text_body"
+            android:layout_marginBottom="@dimen/margin_small"/>
+        <Spinner android:id="@+id/spinnerProto"
+            android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+            android:background="@color/white" android:layout_marginBottom="@dimen/margin"/>
+
+        <!-- UDP Bandwidth -->
+        <TextView android:id="@+id/labelUdpBw"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Bandwidth UDP" android:textColor="@color/text_dark"
+            android:textStyle="bold" android:textSize="@dimen/text_body"
+            android:layout_marginBottom="@dimen/margin_small"/>
+        <EditText android:id="@+id/etUdpBw"
+            android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+            android:hint="5G" android:inputType="text"
+            android:text="5G" android:padding="@dimen/margin_small"
+            android:background="@color/white" android:layout_marginBottom="@dimen/margin"/>
+
+        <!-- Duración -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Duración del Monitoreo" android:textColor="@color/primary"
+            android:textStyle="bold" android:textSize="@dimen/text_title"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="@dimen/margin">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginEnd="@dimen/margin_small">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Días" android:textColor="@color/text_dark" android:textStyle="bold"/>
+                <EditText android:id="@+id/etDias"
+                    android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+                    android:text="0" android:inputType="number"
+                    android:padding="@dimen/margin_small" android:background="@color/white"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginEnd="@dimen/margin_small">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Horas" android:textColor="@color/text_dark" android:textStyle="bold"/>
+                <EditText android:id="@+id/etHoras"
+                    android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+                    android:text="0" android:inputType="number"
+                    android:padding="@dimen/margin_small" android:background="@color/white"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Minutos" android:textColor="@color/text_dark" android:textStyle="bold"/>
+                <EditText android:id="@+id/etMinutos"
+                    android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+                    android:text="30" android:inputType="number"
+                    android:padding="@dimen/margin_small" android:background="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Intervalo -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Intervalo entre Pruebas" android:textColor="@color/primary"
+            android:textStyle="bold" android:textSize="@dimen/text_title"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="@dimen/margin">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginEnd="@dimen/margin_small">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Minutos" android:textColor="@color/text_dark" android:textStyle="bold"/>
+                <EditText android:id="@+id/etIntMin"
+                    android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+                    android:text="0" android:inputType="number"
+                    android:padding="@dimen/margin_small" android:background="@color/white"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Segundos" android:textColor="@color/text_dark" android:textStyle="bold"/>
+                <EditText android:id="@+id/etIntSec"
+                    android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+                    android:text="30" android:inputType="number"
+                    android:padding="@dimen/margin_small" android:background="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Duración test -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Duración de cada prueba (seg)" android:textColor="@color/text_dark"
+            android:textStyle="bold" android:textSize="@dimen/text_body"
+            android:layout_marginBottom="@dimen/margin_small"/>
+        <EditText android:id="@+id/etTestDur"
+            android:layout_width="match_parent" android:layout_height="@dimen/input_height"
+            android:text="10" android:inputType="number"
+            android:padding="@dimen/margin_small"
+            android:background="@color/white" android:layout_marginBottom="@dimen/margin_large"/>
+
+        <Button android:id="@+id/btnIniciar"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:text="▶ INICIAR MONITOREO"
+            android:background="@color/primary"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

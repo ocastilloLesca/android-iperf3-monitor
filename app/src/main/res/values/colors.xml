@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#00a8cc</color>
+    <color name="primary_dark">#0891b2</color>
+    <color name="primary_darker">#0e7490</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#F0F9FF</color>
+    <color name="text_dark">#0e7490</color>
+    <color name="success">#22c55e</color>
+    <color name="danger">#e74c3c</color>
+    <color name="warning">#f39c12</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="log_bg">#1a1a2e</color>
+    <color name="log_text">#00ff88</color>
+</resources>
