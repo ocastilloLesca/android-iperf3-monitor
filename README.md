@@ -1,6 +1,6 @@
-# Monitor de Red - Coopelesca R.L.
+# APK de pruebas Android Iperf
 
-Aplicación Android para monitoreo de red con iperf3.
+Aplicación Android para pruebas de red con iperf3.
 
 ## Características
 - TCP Download/Upload con retransmisiones
